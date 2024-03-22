@@ -1,29 +1,34 @@
-import { FaPhone } from 'react-icons/fa6';
-import { FaUserLarge } from 'react-icons/fa6';
 import css from './Contact.module.css';
+import { FaUser } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa';
+import { MdDeleteForever } from 'react-icons/md';
 
-const Contact = ({ name, number, id, onDeleteContact }) => {
+const Contact = ({
+  contact: { id, name, number },
+  deletingContact,
+  setter,
+}) => {
   return (
-    <div className={css.contactBox}>
-      <div>
-        <p>
-          <span className={css.icon}>
-            <FaPhone />
-          </span>
-          {name}
-        </p>
-        <p>
-          <span className={css.icon}>
-            <FaUserLarge />
-          </span>
-          {number}
-        </p>
+    <>
+      <div className={css.contact}>
+        <FaUser className={css.contactIcon} />
+        <h2 className={css.name}>{name}</h2>
       </div>
-      <button className={css.btn} onClick={() => onDeleteContact(id)}>
-        Delete
+      <div className={css.contact}>
+        <FaPhone className={css.contactIcon} />
+        <p className={css.number}>{number}</p>
+      </div>
+      <button
+        className={css.button}
+        type="button"
+        onClick={() => {
+          deletingContact(id);
+          setter('');
+        }}
+      >
+        <MdDeleteForever className={css.icon} />
       </button>
-    </div>
+    </>
   );
 };
-
 export default Contact;
