@@ -12,7 +12,7 @@
 }
 
 .contactIcon {
-  color: #5f9ea0;
+  color: rgb(11, 12, 12);
   width: 20px;
   height: 20px;
 }
@@ -30,7 +30,7 @@
 .icon {
   width: 40px;
   height: 40px;
-  color: cadetblue;
+  color: rgb(11, 12, 12);
 }
 
 .button:hover .icon {

@@ -45,7 +45,7 @@
   transition: all 300ms ease-in-out;
 }
 
-.addButton {
+/* .addButton {
   span {
     position: relative;
     font-size: 20px;
@@ -82,4 +82,4 @@
 
 .addButton:active {
   transform: scale(0.95);
-}
+} */
