@@ -33,6 +33,7 @@ function App() {
         return contactId !== contact.id;
       });
     });
+    setWantedContact("")
   };
 
   return (
@@ -43,12 +44,11 @@ function App() {
       <div className="phonebook-wrapper">
         <div className="form-and-filter-wrapper">
           <ContactForm addingContact={addNewContact} />
-          <SearchBox value={wantedName} setter={setWantedContact} />
+          <SearchBox value={wantedName} OnFilterChange={setWantedContact} />
         </div>
         <ContactList
           contactList={visibleContact}
           deletingContact={deleteContact}
-          setter={setWantedContact}
         />
       </div>
     </div>
