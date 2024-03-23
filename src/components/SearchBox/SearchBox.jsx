@@ -1,7 +1,7 @@
 import css from './SearchBox.module.css';
 import { useId } from 'react';
 
-const SearchBox = ({ value, setter }) => {
+const SearchBox = ({ value, OnFilterChange }) => {
   const searchFieldId = useId();
 
   return (
@@ -12,7 +12,7 @@ const SearchBox = ({ value, setter }) => {
         name="searchField"
         id={searchFieldId}
         value={value}
-        onChange={e => setter(e.target.value)}
+        onChange={e => OnFilterChange(e.target.value)}
       ></input>
     </div>
   );
