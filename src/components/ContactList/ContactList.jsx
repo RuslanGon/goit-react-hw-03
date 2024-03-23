@@ -1,17 +1,13 @@
-import css from './ContactList.module.css';
-import Contact from '../Contact/Contact';
+import css from "./ContactList.module.css";
+import Contact from "../Contact/Contact";
 
-const ContactList = ({ contactList, deletingContact, setter }) => {
+const ContactList = ({ contactList, deletingContact }) => {
   return (
     <ul className={css.list}>
-      {contactList.map(contact => {
+      {contactList.map((contact) => {
         return (
           <li key={contact.id}>
-            <Contact
-              contact={contact}
-              deletingContact={deletingContact}
-              setter={setter}
-            ></Contact>
+            <Contact contact={contact} deletingContact={deletingContact} />
           </li>
         );
       })}

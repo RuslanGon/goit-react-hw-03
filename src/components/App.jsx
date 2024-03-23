@@ -42,14 +42,14 @@ function App() {
       </h1>
       <div className="phonebook-wrapper">
         <div className="form-and-filter-wrapper">
-          <ContactForm addingContact={addNewContact}></ContactForm>
-          <SearchBox value={wantedName} setter={setWantedContact}></SearchBox>
+          <ContactForm addingContact={addNewContact} />
+          <SearchBox value={wantedName} setter={setWantedContact} />
         </div>
         <ContactList
           contactList={visibleContact}
           deletingContact={deleteContact}
           setter={setWantedContact}
-        ></ContactList>
+        />
       </div>
     </div>
   );

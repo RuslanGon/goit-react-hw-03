@@ -6,7 +6,6 @@ import { MdDeleteForever } from 'react-icons/md';
 const Contact = ({
   contact: { id, name, number },
   deletingContact,
-  // setter,
 }) => {
   return (
     <>
@@ -23,7 +22,6 @@ const Contact = ({
         type="button"
         onClick={() => {
           deletingContact(id);
-          // setter('');
         }}
       >
         <MdDeleteForever className={css.icon} />
